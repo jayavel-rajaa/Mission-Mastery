@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int main(){
+  int n,dis=0;
+  cin>>n;
+  if(n<0){
+    cout<<"Invalid Input";
+    return 0;
+  }
+  int arr[n];
+  for(int i=0;i<n;i++){
+    cin>>arr[i];
+    if(arr[i]<0 || arr[i]>6){
+      cout<<"Invalid Input";
+      return 0;
+    }
+  }
+bool s[7]={false};
+for(int i=0;i<n;i++){
+if(!s[arr[i]]){
+  s[arr[i]]={true};
+  dis++;
+}
+}
+cout<<dis;
+return 0;
+}
+
+ 
