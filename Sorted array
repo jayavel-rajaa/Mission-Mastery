@@ -1,0 +1,30 @@
+#include<iostream>
+#include<vector>
+#include<algorithm>  
+using namespace std;
+int main() 
+{
+    int n;
+    cin>>n;
+
+    if(n<0||n>1000)
+    {
+        cout<<"Invalid Input"<<endl;
+        return 0;
+    }
+    vector<int>catches(n);
+    for(int i=0;i<n;++i) 
+    {
+        cin>>catches[i];
+        if(catches[i]<0)
+        {
+            cout<<"Invalid Input"<<endl;
+            return 0;
+        }
+    }
+    sort(catches.begin(),catches.end());
+    for (int i=0;i<n;++i){
+        cout<<catches[i]<<endl;
+    }
+    return 0;
+}
