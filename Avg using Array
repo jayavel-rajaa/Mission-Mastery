@@ -21,6 +21,5 @@ int main(){
   }
   
 }avg=avg/n;
-  cout<<avg;
-  
+  cout<<avg
 }
