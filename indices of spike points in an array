@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+int main(){
+  int n,k;
+  cin>>n;
+  if(n<0){
+    cout<<"Invalid Input";  
+    return 0;
+  }
+  int arr[n];
+  for(int i=1;i<=n;i++){
+    cin>>arr[i];
+    if(arr[i]<0 || arr[i]>36){
+      cout<<"Invalid Input";
+      return 0;
+    }
+  }
+  for(int i=1;i<=n;i++){
+    k=arr[i];
+    if(i==1 && k>arr[i+1]){
+      cout<<i<<endl;
+    }
+    else if(i==n && arr[i]>arr[i-1]){
+      cout<<i<<endl;
+    }
+    else if(i>1 && i<n && arr[i]>arr[i-1] && arr[i]>arr[i+1]){
+      cout<<i<<endl;
+    }
+  }
+  return 0;
+}
