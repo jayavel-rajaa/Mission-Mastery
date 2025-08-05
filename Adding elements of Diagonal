@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main(){
+  int rowcol;
+  int s=0;
+  cin>>rowcol;
+  int arr[1000][1000];
+  for(int i=0;i<rowcol;i++){
+    for(int j=0;j<rowcol;j++){
+      cin>>arr[i][j];
+    }
+  }
+  for(int i=0;i<rowcol;i++){
+    for(int j=0;j<rowcol;j++){
+   if(i==j){
+        s+=arr[i][j]; 
+      }
+    }
+  }
+  cout<<s;
+  return 0;
+}
