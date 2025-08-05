@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+int main(){
+int rc,sum=0;
+cin>>rc;
+int arr[1000][1000];
+for(int i=0;i<rc;i++){
+  for(int j=0;j<rc;j++){
+    cin>>arr[i][j];
+  }
+}
+for (int i = 0; i < rc; i++) {
+  for(int j=0;j<rc;j++){
+    if (i==0) {
+        sum+=arr[i][j];
+  } else if(i==rc-1){
+      sum+=arr[i][j];
+    }
+    else {
+      if(i=rc-i-1){
+        sum+=arr[i][j];
+      }
+    }
+    }
+}
+cout<<sum;
+return 0;
+}
